@@ -1,0 +1,135 @@
+footer {
+    background-color: #0F2C49;
+    padding: 50px var(--padding);
+
+    .info-links {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: var(--padding);
+        justify-content: space-between;
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+
+        .info {
+            color: #ddd;
+
+            .logo {
+                width: 70%;
+                max-width: 250px;
+                padding-bottom: 30px;
+
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .details {
+                font-size: 1.1rem;
+                text-align: justify;
+            }
+        }
+
+        .links {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+
+            @media screen and (max-width: 650px) {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            div {
+                h3 {
+                    color: #ddd;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .4rem;
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: #ddd;
+                            transition: color .2s;
+
+                            &:hover{
+                                color: #F05223;
+                            }
+                        }
+                    }
+                }
+
+                &.social {
+                    ul {
+                        flex-direction: row;
+                        gap: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        background-color: #fff;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 80px;
+
+
+        @media screen and (max-width: 650px) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .info {
+            display: flex;
+
+            .icon {
+                width: 50px;
+                font-size: 1.1rem;
+                text-align: center;
+            }
+
+            .detail {
+                h4 {
+                    font-size: 1.1rem;
+                    margin-bottom: .7em;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: .9rem;
+
+                    a{
+                        text-decoration: none;
+                        color: #111;
+                        transition: color .2s;
+
+                        &:hover{
+                            color: #F05223;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copy {
+        color: #D5D4D4DD;
+        font-size: 0.7rem;
+        text-align: right;
+        margin-top: 1rem;
+    }
+}

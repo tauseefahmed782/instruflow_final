@@ -1,0 +1,203 @@
+@import url("./global.scss");
+ @import url("./footer.scss");
+ .title-head {
+	 margin-top: 80px;
+	 height: 180px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 background-color: #31b982;
+	 padding: clamp(40px, 3vw, 80px) var(--padding);
+	 color: #fff;
+}
+ .title-head h1 {
+	 font-size: clamp(1.5rem, 3vw, 2.5rem);
+	 letter-spacing: 0.05em;
+	 text-align: center;
+	 text-transform: uppercase;
+}
+
+ .product .categories {
+	 display: flex;
+	 padding: 50px var(--padding);
+	 padding-bottom: 0px;
+}
+.product-preview {
+	padding:  0px var(--padding);
+	padding-bottom: 50px;
+
+}
+ .product .categories .links a {
+	 color: #525560;
+	 text-transform: uppercase;
+	 font-weight: 600;
+	 padding: 0.7em 0.5em;
+	 border-bottom: 1px solid #525560 44;
+	 text-decoration: none;
+}
+ @media screen and (max-width: 850px) {
+	 .product .categories .links a {
+		 font-size: 0.8rem;
+	}
+}
+ @media screen and (max-width: 370px) {
+	 .product .categories .links a {
+		 font-size: 0.6rem;
+	}
+}
+ .product .categories .links.active a {
+	 color: #1d2130;
+	 border-bottom: 2px solid #f05223;
+}
+.links.current a{
+	color: #f05223!important;
+}
+ .product .product-preview {
+	 display: grid;
+	 grid-template-columns: 11fr 9fr;
+	 gap: 2rem;
+}
+ @media screen and (max-width: 720px) {
+	 .product .product-preview {
+		 grid-template-columns: 1fr;
+	}
+}
+ .product .product-preview .details h2 {
+	 margin-top: 80px;
+	 color: #1d2130;
+	 line-height: 1;
+	 font-size: 3rem;
+	 text-transform: capitalize;
+
+}
+ @media screen and (max-width: 1050px) {
+	 .product .product-preview .details h1 {
+		 font-size: 2.5rem;
+		 text-transform: capitalize;
+	}
+}
+ @media screen and (max-width: 850px) {
+	 .product .product-preview .details h1 {
+		 font-size: 2rem;
+		 margin-top: 60px;
+	}
+}
+ .product .product-preview .details p {
+	 color: #525560;
+	 margin-top: 40px;
+	 line-height: 1.5;
+	 font-family: sans-serif;
+	 letter-spacing: 0.05em;
+  
+}
+ @media screen and (max-width: 850px) {
+	 .product .product-preview .details p {
+		 line-height: 1.2;
+	}
+}
+.product .product-preview .details .button-box{
+margin-top: 40px;
+}
+ .product .product-preview .details a {
+	 
+	 color: #fff;
+	 background-color: #0f2c49;
+	 font-size: 1.2rem;
+	 padding: 0.7em 1em;
+	 text-decoration: none;
+	 outline: none;
+	 border: none;
+	 border-radius: 3px;
+}
+ .product .product-preview .image {
+	 display: flex;
+	 align-items: center;
+	 justify-content: end;
+}
+ .product .product-preview .image img {
+	 width: 100%;
+}
+ .related-product {
+	 padding: 50px var(--padding) 100px;
+}
+ .related-product .heading {
+	 color: #1d2130;
+	 margin-bottom: 40px;
+}
+ .related-product .heading h1 {
+	 margin-top: 30px;
+	 font-size: 3rem;
+	 text-align: center;
+}
+ @media screen and (max-width: 1050px) {
+	 .related-product .heading h1 {
+		 font-size: 2.5rem;
+	}
+}
+ @media screen and (max-width: 850px) {
+	 .related-product .heading h1 {
+		 font-size: 2rem;
+	}
+}
+ .related-product .swipe-container {
+	 width: calc(100% / var(--padding));
+	 margin: 0 auto;
+	 position: relative;
+}
+ .related-product .swipe-container .swiper-button {
+	 position: absolute;
+	 top: 50%;
+	 height: 50px;
+	 width: 50px;
+	 background-color: #fff;
+	 border-radius: 50px;
+	 box-shadow: 0 5px 15px #000 4;
+	 z-index: 2;
+	 display: grid;
+	 place-items: center;
+}
+ .related-product .swipe-container .swiper-button.prev {
+	 left: 0;
+	 transform: translate(-50%, -50%);
+}
+ .related-product .swipe-container .swiper-button.next {
+	 right: 0;
+	 transform: translate(50%, -50%);
+}
+ .related-product .swipe-container .swiper-pagination {
+	 position: absolute;
+	 top: 110%;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 height: 30px;
+}
+ .related-product .swipe-container .swiper-slide {
+	 border-radius: 5px;
+	 position: relative;
+	 --margin: clamp(15px, 2vw, 30px);
+}
+ .related-product .swipe-container .swiper-slide .box {
+	 height: 300px;
+	 background-color: #222;
+	 border-radius: 15px;
+	 padding: 30px;
+	 color: #fff;
+	 display: flex;
+	 align-items: start;
+	 justify-content: center;
+	 flex-direction: column;
+	 gap: 20px;
+}
+ .related-product .swipe-container .swiper-slide .box h3 {
+	 font-size: 1.4em;
+}
+ .related-product .swipe-container .swiper-slide .box button {
+	 color: #000;
+	 background-color: #fff;
+	 font-size: 1rem;
+	 padding: 0.7em 1em;
+	 outline: none;
+	 border: none;
+	 border-radius: 3px;
+}
+ 
